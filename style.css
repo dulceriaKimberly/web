@@ -1,0 +1,393 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(245, 175, 185);
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(180, 50, 90);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: clamp(1.4rem, 5vw, 2.5rem);
+    color: rgb(20, 20, 20);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+
+main {
+    padding: 20px 30px;
+}
+
+
+.bienvenida {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.texto-bienvenida {
+    flex: 1;
+    min-width: 200px;
+}
+
+.texto-bienvenida h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+}
+
+.presentacion {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.imagen-bienvenida img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+
+.quienes {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.quienes h2 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin-bottom: 20px;
+}
+
+.quienes-contenido {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.quienes-texto {
+    flex: 1;
+    min-width: 200px;
+}
+
+.quienes-texto h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: rgb(100, 20, 50);
+}
+
+.quienes-texto p {
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+.quienes-img img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+
+.mision-page {
+    padding: 10px 0;
+}
+
+.mision-page > h2 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    margin-bottom: 20px;
+}
+
+.mision-contenido {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.mision-texto {
+    flex: 1;
+    min-width: 200px;
+}
+
+.mision-texto h3 {
+    font-size: 1.1rem;
+    color: rgb(100, 20, 50);
+    margin-bottom: 8px;
+}
+
+.mision-texto p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.mision-img img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+.valores-section h2 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin-bottom: 20px;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.valor-item {
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.valor-item h3 {
+    color: rgb(100, 20, 50);
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.valor-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.productos-page > h2 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 10px 0 30px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.producto img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.producto p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.producto .precio {
+    font-size: 0.8rem;
+    color: rgb(100, 20, 50);
+    font-weight: bold;
+}
+
+.contacto-page {
+    padding: 10px 0;
+}
+
+.mapa {
+    margin-bottom: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
+}
+
+.redes {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.red-social:hover {
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+.red-social img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+    header {
+        padding: 12px 18px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(160, 40, 75);
+        border-radius: 6px;
+        margin-top: 8px;
+        gap: 0;
+    }
+
+    #menu-toggle:checked + .hamburger + ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 16px;
+        font-size: 1rem;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    main {
+        padding: 15px 16px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bienvenida {
+        flex-direction: column;
+    }
+
+    .mision-contenido {
+        flex-direction: column;
+    }
+
+    .quienes-contenido {
+        flex-direction: column;
+    }
+
+    .mapa iframe {
+        height: 280px;
+    }
+
+    .redes {
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
